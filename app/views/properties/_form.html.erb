@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :rent %>
-    <%= form.number_field :rent %>
+    <%= form.text_field :rent %>
   </div>
 
   <div class="field">
@@ -30,6 +30,24 @@
     <%= form.label :age %>
     <%= form.number_field :age %>
   </div>
+
+  <%= form.fields_for :nearest_stations do |nearest_station| %>
+  <div class="field">
+    <%= nearest_station.label :line %>
+    <%= nearest_station.text_field :line %>
+  </div>
+
+  <div class="field">
+    <%= nearest_station.label :station %>
+    <%= nearest_station.text_field :station %>
+  </div>
+
+  <div class="field">
+    <%= nearest_station.label :minute_walk %>
+    <%= nearest_station.number_field :minute_walk %>
+  </div>
+
+  <% end %>
 
   <div class="field">
     <%= form.label :note %>

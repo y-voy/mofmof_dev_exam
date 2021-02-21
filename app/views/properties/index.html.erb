@@ -18,13 +18,13 @@
     <% @properties.each do |property| %>
       <tr>
         <td><%= property.name %></td>
-        <td><%= property.rent %></td>
+        <td><%= number_to_currency(property.rent)%></td>
         <td><%= property.address %></td>
-        <td><%= property.age %></td>
+        <td><%= property.age %>年</td>
         <td><%= property.note %></td>
-        <td><%= link_to 'Show', property %></td>
-        <td><%= link_to 'Edit', edit_property_path(property) %></td>
-        <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '詳細', property %></td>
+        <td><%= link_to '編集', edit_property_path(property) %></td>
+        <td><%= link_to '削除', property, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Property', new_property_path %>
+<%= link_to '物件を登録する', new_property_path %>
