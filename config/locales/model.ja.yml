@@ -1,0 +1,19 @@
+ja:
+  activerecord:
+    models:
+      property: 物件
+    attributes:
+      property:
+        name: 物件名
+        rent: 賃料
+        address: 住所
+        age: 築年数
+        note: 備考
+      user:
+        title: タイトル
+        name: 名前
+        email: メールアドレス
+        current_password: 現在のパスワード
+        password: パスワード
+        password_confirmation: 確認用パスワード
+        remember_me: ログインを記憶
